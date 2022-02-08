@@ -18,9 +18,11 @@ namespace DaySeven
                 {
                     Tanks.Add(new MyClassLib.T34());
                 }
-                catch { 
-                    Console.WriteLine("Exception"); 
+                catch (ArgumentNullException) 
+                { 
+                    Console.WriteLine("Null"); 
                 }
+                
                 
             }
 
@@ -30,7 +32,7 @@ namespace DaySeven
                 {
                     Tanks.Add(new MyClassLib.Pantera());
                 }
-                catch
+                catch (ArgumentNullException)
                 {
                     Console.WriteLine("Exception");
                 }   

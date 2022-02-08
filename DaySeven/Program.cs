@@ -16,7 +16,22 @@ namespace DaySeven
                 Console.WriteLine(Game[i]);
             }
             Console.WriteLine();
-            Console.WriteLine(Game[0] ^ Game[1]);
+            try
+            {
+                Console.WriteLine(Game[0] ^ Game[1]);
+            }
+            catch (InvalidOperationException)
+            {
+                Console.WriteLine("Invalid Operation");
+            }
+            catch (ArgumentNullException)
+            {
+                Console.WriteLine("Argument Null");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             
         }
     }
